@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/commons::head"></head>
+<body>
+<header th:replace="fragments/commons::nav"></header>
+<main>
+    <h1 class="text-center mt-2"><span class="badge badge-pill badge-dark">Add player</span></h1>
+    <hr class="hr-3 w-25 bg-white"/>
+
+    <form
+            th:action="@{/player/add}"
+            th:method="POST"
+            th:object="${addPlayerDTO}"
+            class="mx-auto w-25 bg-blur rounded">
+
+        <div class="form-group">
+            <div class="label-holder text-white textCol d-flex justify-content-center">
+                <label for="firstname" class="h4 mb-2">First name</label>
+            </div>
+            <input
+                    th:field="*{firstName}"
+                    th:errorclass="is-invalid"
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    name="firstName"/>
+            <small class="text-danger invalid-feedback">
+                First name length must be between 3 and 20 characters!
+            </small>
+        </div>
+
+        <div class="form-group">
+            <div class="label-holder textCol d-flex justify-content-center">
+                <label for="lastName" class="h4 mb-2 text-white">Last Name</label>
+            </div>
+            <input
+                    th:field="*{lastName}"
+                    th:errorclass="is-invalid"
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    name="lastName"/>
+            <small class="text-danger invalid-feedback">
+                Title length must be between 2 and 20 characters!
+            </small>
+        </div>
+
+        <div class="form-group">
+            <div class="label-holder text-white textCol d-flex justify-content-center">
+                <label for="age" class="h4 mb-2">Age</label>
+            </div>
+            <input
+                    th:field="*{age}"
+                    th:errorclass="is-invalid"
+                    type="text"
+                    class="form-control"
+                    id="age"
+                    name="age"/>
+            <small class="text-danger invalid-feedback">
+                Player age must be between 14 and 38 ages!
+            </small>
+        </div>
+
+        <div class="form-group">
+            <div class="label-holder text-white textCol d-flex justify-content-center">
+                <label for="value" class="h4 mb-2">Value</label>
+            </div>
+            <input
+                    th:field="*{value}"
+                    th:errorclass="is-invalid"
+                    type="text"
+                    class="form-control"
+                    id="value"
+                    name="value"/>
+            <small class="text-danger invalid-feedback">
+                Value cannot be negative number!
+            </small>
+        </div>
+
+        <div class="form-group">
+            <div class="text-white label-holder d-flex justify-content-center">
+                <label for="position" class="h4 mb-2">Position</label>
+            </div>
+
+            <select
+                    th:field="*{position}"
+                    th:errorclass="is-invalid"
+                    class="browser-default custom-select"
+                    id="position"
+                    name="position">
+                <option value="">Select position</option>
+                <option value="Goalkeeper">Goalkeeper</option>
+                <option value="Defender">Defender</option>
+                <option value="Midfielder">Midfielder</option>
+                <option value="Attacker">Attacker</option>
+            </select>
+
+            <small class="text-danger invalid-feedback">
+                You must select a position!
+            </small>
+        </div>
+
+        <div class="button-holder d-flex justify-content-center">
+            <button type="submit" class="btn btn-warning  mb-3" value="Register">Add player</button>
+        </div>
+
+    </form>
+</main>
+<footer th:replace="fragments/commons::footer"></footer>
+</body>
+</html>
