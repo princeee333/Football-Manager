@@ -1,11 +1,7 @@
 package com.footballmanager.Football.Manager.model.dtos;
-
 import com.footballmanager.Football.Manager.model.entity.Player;
 import com.footballmanager.Football.Manager.model.entity.Position;
 import lombok.Getter;
-
-
-
 
 @Getter
 public class PlayerDTO {

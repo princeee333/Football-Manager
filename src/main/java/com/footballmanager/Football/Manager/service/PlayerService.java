@@ -1,5 +1,4 @@
 package com.footballmanager.Football.Manager.service;
-
 import com.footballmanager.Football.Manager.model.dtos.AddPlayerDTO;
 import com.footballmanager.Football.Manager.model.dtos.PlayerDTO;
 import com.footballmanager.Football.Manager.model.entity.Player;
@@ -10,7 +9,6 @@ import com.footballmanager.Football.Manager.repository.PositionRepository;
 import com.footballmanager.Football.Manager.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.stream.Collectors;
 

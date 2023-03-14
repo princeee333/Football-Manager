@@ -1,8 +1,5 @@
 package com.footballmanager.Football.Manager.controller;
-
 import com.footballmanager.Football.Manager.model.dtos.AddPlayerDTO;
-import com.footballmanager.Football.Manager.model.entity.Player;
-import com.footballmanager.Football.Manager.repository.PlayerRepository;
 import com.footballmanager.Football.Manager.service.AuthService;
 import com.footballmanager.Football.Manager.service.PlayerService;
 import com.footballmanager.Football.Manager.service.UserService;
